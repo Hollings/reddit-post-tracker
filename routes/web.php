@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Auth::routes();
+Route::get('/post','PostWatcherController@index');
+Route::get('/r/{all?}','PostWatcherController@index');
+Route::get('/post/new','PostWatcherController@store');
+Route::get('/post/update','PostWatcherController@update');
+Route::get('/post/{postWatcher}','PostWatcherController@show');
+Route::get('/byidtest/','PostWatcherController@byIdTest');
+Route::get('/r/{subreddit}/comments/{reddit_id}/{extra_url}','PostWatcherController@redditurltest');
+Route::get('rising','PostWatcherController@getRandomIdFromRising');
+Route::get('frontpage', 'PostWatcherController@frontPage');

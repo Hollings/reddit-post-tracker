@@ -6,8 +6,12 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "consoletvs/charts": "4.*",
+        "guzzlehttp/guzzle": "^6.2",
         "laravel/framework": "5.4.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "scopdrag/laravel-google-chart": "^1.0",
+        "zetaphor/reddit-api-client": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -16,8 +20,7 @@
     },
     "autoload": {
         "classmap": [
-            "database/seeds",
-            "database/factories"
+            "database"
         ],
         "psr-4": {
             "App\\": "app/"
